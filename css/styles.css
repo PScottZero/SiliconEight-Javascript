@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: aliceblue;
+    font-family: 'Staatliches', cursive;
+}
+
+a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightgray;
+    text-decoration: none;
+}
+
+canvas {
+    position: absolute;
+    top: 6.8em;
+    left: 16.2em;
+    margin: auto;
+    width: 320px;
+    height: 160px;
+    background: black;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    position: relative;
+    margin-top: 8vh;
+    min-width: 55em;
+    max-width: 55em;
+    height: auto;
+}
+
+#content img {
+    position: relative;
+    width: 100%;
+}
+
+/* hamburger menu button styling */
+.bar1, .bar2, .bar3 {
+    z-index: 3;
+    width: 3em;
+    height: 0.4em;
+    border-radius: 0.4em;
+    margin: 0.4em 0;
+    background: #666;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    transition: 0.2s;
+}
+
+/* hamburger menu button animation */
+.change .bar1 {
+    transform: translate(-0.1em, 0.8em) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(-0.1em, -0.8em) rotate(45deg);
+}
+
+#file_button {
+    position: absolute;
+    text-align: center;
+    width: 7em;
+    height: 2em;
+    top: 27em;
+    left: 30.5em;
+    background: #666;
+    border-radius: 1em;
+}
+
+#file_button p {
+    margin-top: 0.4em;
+}
+
+#file_selector {
+    position: absolute;
+    width: 7em;
+    height: 2em;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/* footer */
+#footer {
+    position: fixed;
+    z-index: 0;
+    bottom: 0;
+    padding: 1em;
+
+    /* font */
+    font-size: 18px;
+    color: #666;
+}
+
+/* hamburger menu button */
+#menu_button {
+    display: inline-block;
+    z-index: 3;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3em;
+    height: 3em;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+/* slide menu */
+#slide_menu {
+    position: fixed;
+    z-index: 2;
+    width: 20em;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 8em;
+    text-align: left;
+    line-height: 2;
+    top: 0;
+    left: -21em;
+    background: #AAA;
+    transition: 0.2s;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
+}
+
+/* links in slide menu */
+#slide_menu a {
+    display: block;
+    font-size: 36px;
+    margin-left: 1em;
+    transition: 0.2s;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/chip8.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png">
+    <title>SiliconEight</title>
+</head>
+<body>
+<div id="main">
+    <div id="menu_button" onclick="menu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <div id="slide_menu">
+        <a href="index.html"> Home </a>
+        <a href=""> About the Chip-8 </a>
+        <a href="http://www.pjs4.com"> About Me </a>
+    </div>
+
+    <div id="content">
+        <img src="img/pc.svg" alt="pc">
+        <canvas id="chip8" width="320px" height="160px"></canvas>
+        <div id="file_button">
+            <p> Insert Program </p>
+            <input type="file" id="file_selector">
+        </div>
+    </div>
+
+    <div id="footer">
+        <p> Created By Paul Scott &bull; Computer Science &bull; Penn State '21 &bull; &copy; 2019 </p>
+    </div>
+</div>
+</body>
+</html>
