@@ -12,6 +12,8 @@ class Chip8 {
         this.memory = new Uint8Array(this.memBuffer);
         this.PC = 0x200;
 
+        this.loadFont();
+
         this.stackBuffer = new ArrayBuffer(0x20);
         this.stack = new Uint16Array(this.stackBuffer);
         this.SP = -1;
@@ -28,23 +30,10 @@ class Chip8 {
         this.V = new Uint8Array(this.regBuffer);
     }
 
-    state() {
-        return this.isRunning;
-    }
-
-    load(chip8) {
-        this.isRunning = false;
-        let file = document.getElementById("file_selector").files[0];
-        let reader = new FileReader();
-        reader.onload = function() {
-            let result = reader.result;
-            for (let i = 0; i < result.length; i++) {
-                chip8.memory[i + chip8.PC] = result[i].charCodeAt(0);
-            }
-            chip8.loadFont();
-        };
-        reader.readAsBinaryString(file);
-        this.isRunning = true;
+    load(program) {
+        for (let i = 0; i < program.length; i++)
+            this.memory[this.PC + i] = program[i];
+        this.loadFont();
     }
 
     keypress(key, value) {
@@ -52,11 +41,22 @@ class Chip8 {
         this.currentKey = key;
     }
 
-    step() {
-        this.opcode = (this.memory[this.PC] << 8) | (this.memory[this.PC + 1]);
-        this.decode();
-        if (this.delay > 0) this.delay--;
-        if (this.sound > 0) this.sound--;
+    run() {
+        this.isRunning = true;
+        let self = this;
+        requestAnimationFrame(async function step() {
+            for (let i = 0; i < 10; i++) {
+                if (self.isRunning) {
+                    self.opcode = (self.memory[self.PC] << 8) | (self.memory[self.PC + 1]);
+                    self.decode();
+                }
+            }
+            if (self.isRunning) {
+                if (self.delay > 0) self.delay--;
+                if (self.sound > 0) self.sound--;
+                requestAnimationFrame(step);
+            }
+        });
     }
 
     loadFont() {
@@ -243,13 +243,13 @@ class Chip8 {
                         break;
 
                     case 0x0A:
+                        /*
                         this.currentKey = -1;
-                        this.isRunning = false;
                         while (this.currentKey < 0) {
-                            this.sleep(10);
+                            this.sleep(100);
                         }
                         this.V[reg1] = this.currentKey;
-                        this.isRunning = true;
+                        */
                         break;
 
                     case 0x15:
@@ -351,6 +351,7 @@ class Chip8 {
         this.PC = 0x200;
         this.SP = -1;
         this.clearDisplay();
+        this.loadFont();
 
         for (let i = 0; i < this.memory.length; i++)
             this.memory[i] = 0x0;
@@ -363,6 +364,10 @@ class Chip8 {
             this.key[i] = 0x0;
             this.V[i] = 0x0;
         }
+    }
+
+    stop() {
+        this.isRunning = false;
     }
 
     setPixel(row, col, value) {
@@ -389,9 +394,5 @@ class Chip8 {
                 ctx.fillStyle = "#000";
             ctx.fillRect((i % 64) * 5, Math.floor(i / 64) * 5, 5, 5);
         }
-    }
-
-    sleep(time_ms) {
-        return new Promise(resolve => setTimeout(resolve, time_ms))
     }
 }
