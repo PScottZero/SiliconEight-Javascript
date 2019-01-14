@@ -105,15 +105,13 @@ class Chip8 {
                 break;
 
             case 0x1000:
-                this.PC = this.opcode & 0xFFF;
-                this.PC -= 2;
+                this.PC = (this.opcode & 0xFFF) - 2;
                 break;
 
             case 0x2000:
                 this.SP++;
                 this.stack[this.SP] = this.PC;
-                this.PC = this.opcode & 0xFFF;
-                this.PC -= 2;
+                this.PC = (this.opcode & 0xFFF) - 2;
                 break;
 
             case 0x3000:
@@ -135,6 +133,7 @@ class Chip8 {
             case 0x7000:
                 this.V[reg1] += lo;
                 break;
+
             case 0x8000:
                 switch (subop) {
 
@@ -143,7 +142,7 @@ class Chip8 {
                         break;
 
                     case 0x1:
-                        this.V[reg1] = this.V[reg1] | this.V[reg1];
+                        this.V[reg1] = this.V[reg1] | this.V[reg2];
                         break;
 
                     case 0x2:
@@ -196,7 +195,7 @@ class Chip8 {
                 break;
 
             case 0xB000:
-                this.PC = this.V[0x0] + this.opcode;
+                this.PC = this.V[0x0] + (this.opcode & 0xFFF) - 2;
                 break;
 
             case 0xC000:
@@ -243,13 +242,7 @@ class Chip8 {
                         break;
 
                     case 0x0A:
-                        /*
-                        this.currentKey = -1;
-                        while (this.currentKey < 0) {
-                            this.sleep(100);
-                        }
                         this.V[reg1] = this.currentKey;
-                        */
                         break;
 
                     case 0x15:

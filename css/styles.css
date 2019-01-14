@@ -9,6 +9,10 @@ body {
     height: 100%;
     background: white;
     font-family: 'Staatliches', cursive;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
 
 a, a:visited {
@@ -37,6 +41,14 @@ canvas {
     justify-content: center;
     width: 100%;
     height: 100%;
+}
+
+#how_to {
+    font-size: 36px;
+}
+
+#how_to img {
+    height: 15em;
 }
 
 #content {
@@ -145,6 +157,7 @@ canvas {
 /* slide menu */
 #slide_menu {
     position: fixed;
+    display: block;
     z-index: 2;
     width: 20em;
     height: 100%;
