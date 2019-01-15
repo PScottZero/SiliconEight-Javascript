@@ -28,8 +28,8 @@
     <div id="content">
         <img src="img/pc.svg" alt="pc">
         <canvas id="chip8" width="320px" height="160px"></canvas>
-        <input type="button" id="file_button" value="Insert Program" onclick="show_roms()">
-        <div id="roms_list">
+        <a id="roms_button" onclick="show_roms()">Load Rom</a>
+        <div id="rom_list">
             <ul>
                 <li><a onclick="run_emulator('AIRPLANE')">Airplane</a></li>
                 <li><a onclick="run_emulator('ASTRO')">Astro Dodge</a></li>
@@ -50,18 +50,17 @@
                 <li><a onclick="run_emulator('STARS')">Stars</a></li>
                 <li><a onclick="run_emulator('TANK')">Tank</a></li>
                 <li><a onclick="run_emulator('TETRIS')">Tetris</a></li>
-                <li><a onclick="run_emulator('TICTAC')">Tic-Tac-Toe</a></li>
                 <li><a onclick="run_emulator('UFO')">UFO</a></li>
                 <li><a onclick="run_emulator('VBRIX')">Vertical Brix</a></li>
                 <li><a onclick="run_emulator('WIPEOFF')">Wipe Off</a></li>
                 <li><a onclick="run_emulator('WORM')">Worm</a></li>
-                <li><a onclick="run_emulator('XMIRROR')">X-Mirror</a></li>
+                <li style="margin-bottom: 1em"><a onclick="run_emulator('XMIRROR')">X-Mirror</a></li>
             </ul>
         </div>
     </div>
 
     <div id="footer">
-        <p> Created By Paul Scott &bull; Computer Science &bull; Penn State '21 &bull; &copy; 2019 </p>
+        <p> Created By Paul Scott &bull; Computer Science &bull; Penn State '21 &bull; 14 January 2019 </p>
     </div>
 </div>
 </body>

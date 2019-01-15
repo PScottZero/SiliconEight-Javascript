@@ -29,7 +29,7 @@ function menu() {
 }
 
 function show_roms() {
-    let style = document.getElementById("roms_list").style;
+    let style = document.getElementById("rom_list").style;
     if (style.display === 'none') style.display = 'block';
     else style.display = 'none';
 }
@@ -155,19 +155,12 @@ $(document).on("dragstart", function() {
 // https://stackoverflow.com/questions/1403615/use-jquery-to-hide-a-div-when-the-user-clicks-outside-of-it
 $(document).mouseup(function(e)
 {
-    let container = $("roms_list");
-    let container2 = $("slide_menu");
+    let container = $("rom_list");
 
     // if the target of the click isn't the container nor a descendant of the container
     if (!container.is(e.target) && container.has(e.target).length === 0)
     {
-        let style = document.getElementById("roms_list").style;
+        let style = document.getElementById("rom_list").style;
         if (style.display !== 'none') show_roms();
-    }
-
-    if (!container2.is(e.target) && container2.has(e.target).length === 0)
-    {
-        let style = document.getElementById("slide_menu").style;
-        if (style.left === "0em" ) menu();
     }
 });
