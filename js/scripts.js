@@ -2,12 +2,19 @@ let chip8 = null;
 
 $(document).ready( function() {
     chip8 = new Chip8();
-    run_emulator('STARTUP')
+    run_emulator('STARTUP');
+
+    let keys = document.getElementsByClassName("key");
+    for (let i = 0; i < keys.length; i++) {
+        keys[i].addEventListener('touchstart', keypad_down, false);
+        keys[i].addEventListener('touchend', keypad_up, false);
+    }
 });
 
 async function run_emulator(file) {
     chip8.stop();
     await sleep(10);
+    highlight_controls(file);
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "roms/" + file, true);
     xhr.responseType = "arraybuffer";
@@ -17,6 +24,78 @@ async function run_emulator(file) {
     };
     xhr.send();
     chip8.run();
+}
+
+function highlight_controls(file) {
+    let keys = document.getElementsByClassName("key");
+    for (let i = 0; i < keys.length; i++) {
+        keys[i].style.background = '#AAA'
+    }
+    switch (file) {
+        case 'AIRPLANE':
+        case 'LANDING':
+            keys[9].style.background = "#666";
+            break;
+        case 'ASTRO':
+        case 'INVADERS':
+        case 'UFO':
+            keys[4].style.background = "#666";
+            keys[5].style.background = "#666";
+            keys[6].style.background = "#666";
+            break;
+        case 'BLINKY':
+            keys[2].style.background = "#666";
+            keys[6].style.background = "#666";
+            keys[8].style.background = "#666";
+            keys[9].style.background = "#666";
+            break;
+        case 'BRIX':
+            keys[4].style.background = "#666";
+            keys[6].style.background = "#666";
+            break;
+        case 'CAVE':
+            keys[1].style.background = "#666";
+            keys[4].style.background = "#666";
+            keys[6].style.background = "#666";
+            keys[9].style.background = "#666";
+            keys[15].style.background = "#666";
+            break;
+        case 'LUNAR':
+            keys[1].style.background = "#666";
+            keys[4].style.background = "#666";
+            keys[6].style.background = "#666";
+            break;
+        case 'PADDLES':
+            keys[4].style.background = "#666";
+            keys[6].style.background = "#666";
+            keys[15].style.background = "#666";
+            break;
+        case 'PONG':
+        case 'VBRIX':
+            keys[0].style.background = "#666";
+            keys[4].style.background = "#666";
+            break;
+        case 'TANK':
+            keys[1].style.background = "#666";
+            keys[4].style.background = "#666";
+            keys[5].style.background = "#666";
+            keys[6].style.background = "#666";
+            keys[9].style.background = "#666";
+            break;
+        case 'TETRIS':
+            keys[4].style.background = "#666";
+            keys[5].style.background = "#666";
+            keys[6].style.background = "#666";
+            keys[8].style.background = "#666";
+            break;
+        case 'WORM':
+        case 'XMIRROR':
+            keys[1].style.background = "#666";
+            keys[4].style.background = "#666";
+            keys[6].style.background = "#666";
+            keys[9].style.background = "#666";
+            break;
+    }
 }
 
 function menu() {
@@ -38,17 +117,13 @@ function sleep() {
     return new Promise(resolve => setTimeout(resolve, 10));
 }
 
-function keypad(key, value) {
-    chip8.keypress(key, value);
+function keypad_down(event) {
+    chip8.keypress(parseInt(event.target.innerHTML, 16), 1)
 }
 
-$(document).mouseup(function(e) {
-    e.preventDefault()
-});
-
-$(document).mousedown(function(e) {
-    e.preventDefault()
-});
+function keypad_up(event) {
+    chip8.keypress(parseInt(event.target.innerHTML, 16), 0);
+}
 
 document.onkeydown = function (e) {
     e = e || window.event;
