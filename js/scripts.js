@@ -38,6 +38,10 @@ function sleep() {
     return new Promise(resolve => setTimeout(resolve, 10));
 }
 
+function keypad(key) {
+    chip8.keypress(key, 1);
+}
+
 document.onkeydown = function (e) {
     e = e || window.event;
     switch (e.keyCode) {
