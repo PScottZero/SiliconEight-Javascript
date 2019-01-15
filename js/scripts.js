@@ -42,6 +42,14 @@ function keypad(key) {
     chip8.keypress(key, 1);
 }
 
+$(document).mouseup(function(e) {
+    e.preventDefault()
+});
+
+$(document).mousedown(function(e) {
+    e.preventDefault()
+});
+
 document.onkeydown = function (e) {
     e = e || window.event;
     switch (e.keyCode) {
