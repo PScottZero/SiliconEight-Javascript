@@ -243,25 +243,24 @@ a:hover {
 
     #controls {
         position: relative;
-        padding: 6em;
-        min-width: 40em;
-        max-width: 55em;
+        padding: 2em;
+        margin-top: 2em;
+        width: 100%;
         line-height: 1.5;
     }
 
     #controls p {
-        font-size: 36px;
+        font-size: 16px;
     }
 
     #controls ul {
-        font-size: 36px;
+        font-size: 16px;
         padding-left: 1em;
     }
 
     #controls img {
         display: block;
-        margin: auto;
-        max-height: 20em;
+        width: 100%;
     }
 
     /* footer */
@@ -279,10 +278,12 @@ a:hover {
         font-size: 20px;
     }
 
+    .key:hover { color: white }
+
     #keypad {
         position: fixed;
         height: auto;
-        z-index: 0;
+        z-index: -1;
         display: block;
         left: 50%;
         transform: translate(-50%, 0);
@@ -315,6 +316,7 @@ a:hover {
     #rom_list {
         display: none;
         margin: 0.5em auto 0.5em auto;
+        border: 2px solid #4fff95;
         background: lightgray url('../img/disk.svg');
         width: 11em;
         height: 11em;

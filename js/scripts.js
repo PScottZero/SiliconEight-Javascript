@@ -38,8 +38,8 @@ function sleep() {
     return new Promise(resolve => setTimeout(resolve, 10));
 }
 
-function keypad(key) {
-    chip8.keypress(key, 1);
+function keypad(key, value) {
+    chip8.keypress(key, value);
 }
 
 $(document).mouseup(function(e) {
