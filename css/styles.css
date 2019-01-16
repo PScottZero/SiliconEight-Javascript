@@ -1,9 +1,18 @@
+/*
+Paul Scott
+15 January 2019
+
+styling for silicon eight website
+ */
+
+/* reset browser defaults */
 * {
     padding: 0;
     margin: 0;
     border: 0;
 }
 
+/* website body */
 body {
     width: 100%;
     height: 100%;
@@ -15,18 +24,31 @@ body {
     user-select:none;
 }
 
+/* links */
 a, a:visited {
     color: white;
     text-decoration: none;
 }
 
+/* hovered links */
 a:hover {
     color: lightgray;
     text-decoration: none;
 }
 
+/* main container */
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* desktop styles */
 @media (min-width: 720px) {
 
+    /* chip8 display */
     canvas {
         position: absolute;
         top: 6.8em;
@@ -37,7 +59,7 @@ a:hover {
         background: black;
     }
 
-    /* hamburger menu button styling */
+    /* menu button styling */
     .bar1, .bar2, .bar3 {
         z-index: 3;
         width: 3em;
@@ -49,19 +71,16 @@ a:hover {
         transition: 0.2s;
     }
 
-    /* hamburger menu button animation */
-    .change .bar1 {
-        transform: translate(-0.1em, 0.8em) rotate(-45deg);
-    }
+    /* menu button top bar animation */
+    .change .bar1 { transform: translate(-0.1em, 0.8em) rotate(-45deg) }
 
-    .change .bar2 {
-        opacity: 0;
-    }
+    /* menu button middle bar animation */
+    .change .bar2 { opacity: 0 }
 
-    .change .bar3 {
-        transform: translate(-0.1em, -0.8em) rotate(45deg);
-    }
+    /* menu button bottom bar animation */
+    .change .bar3 { transform: translate(-0.1em, -0.8em) rotate(45deg) }
 
+    /* content container */
     #content {
         position: relative;
         z-index: 1;
@@ -71,11 +90,13 @@ a:hover {
         height: auto;
     }
 
+    /* ibm pc image */
     #content img {
         position: relative;
         width: 100%;
     }
 
+    /* controls page container */
     #controls {
         position: relative;
         padding: 6em;
@@ -84,20 +105,24 @@ a:hover {
         line-height: 1.5;
     }
 
-    #controls p {
-        font-size: 36px;
-    }
+    /* controls page text */
+    #controls p { font-size: 36px }
 
+    /* controls page list */
     #controls ul {
         font-size: 36px;
         padding-left: 1em;
     }
 
+    /* controls page keyboard image */
     #controls img {
         display: block;
         margin: auto;
         max-height: 20em;
     }
+
+    /* hide mobile controls list */
+    #mobile_controls { display: none }
 
     /* footer */
     #footer {
@@ -111,17 +136,10 @@ a:hover {
         color: #666;
     }
 
+    /* hide mobile controls on desktop */
     #keypad { display: none }
 
-    #main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    /* hamburger menu button */
+    /* menu button */
     #menu_button {
         display: inline-block;
         z-index: 3;
@@ -135,6 +153,7 @@ a:hover {
         margin-left: 2em;
     }
 
+    /* rom list container */
     #rom_list {
         display: none;
         position: absolute;
@@ -148,20 +167,24 @@ a:hover {
         overflow-y: auto;
     }
 
+    /* rom list element */
     #rom_list li {
         list-style-type: none;
         font-size: 20px;
     }
 
+    /* rom list link */
     #rom_list a, #rom_list a:visited {
         color: white;
     }
 
+    /* rom list hovered link */
     #rom_list a:hover {
         color: #BBB;
     }
 
-    #roms_button, #roms_button:hover {
+    /* rom selection button */
+    #roms_button {
         position: absolute;
         text-align: center;
         font-family: 'Staatliches', cursive;
@@ -170,11 +193,12 @@ a:hover {
         top: 27.4em;
         left: 25.5em;
         background: #25262D;
-        color: #888;
+        color: #666;
     }
 
-    #roms_button, #roms_button a:hover {
-        color: #666;
+    /* rom selection button hovered */
+    #roms_button:hover {
+        color: #888;
     }
 
     /* slide menu */
@@ -204,17 +228,21 @@ a:hover {
     }
 }
 
+/* mobile styles */
 @media (max-width: 720px) {
 
+    /* chip8 display */
     canvas {
         display: block;
         margin: auto;
         width: 320px;
         height: 160px;
         background: black;
+        border: #666 solid 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
     }
 
-    /* hamburger menu button styling */
+    /* menu button styling */
     .bar1, .bar2, .bar3 {
         z-index: 3;
         width: 2em;
@@ -226,58 +254,74 @@ a:hover {
         transition: 0.2s;
     }
 
-    /* hamburger menu button animation */
+    /* menu button top bar animation */
     .change .bar1 { transform: translate(-0.05em, 0.4em) rotate(-45deg) }
 
+    /* menu button middle bar animation */
     .change .bar2 { opacity: 0 }
 
+    /* menu button bottom bar animation */
     .change .bar3 { transform: translate(-0.05em, -0.8em) rotate(45deg) }
 
+    /* content container */
     #content {
         z-index: 1;
         margin-top: 6em;
         width: 100%;
     }
 
+    /* ibm pc image hidden on mobile */
     #content img { display: none }
 
+    /* controls page container */
     #controls {
         position: relative;
-        padding: 2em;
-        margin-top: 2em;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 1em;
+        padding: 1.2em;
+        margin: 5em 1em 1em 1em;
+        background: #AAA;
         width: 100%;
-        line-height: 1.5;
+        line-height: 1;
     }
 
+    /* controls page text */
     #controls p {
         font-size: 20px;
+        color: white;
     }
 
+    /* controls page list */
     #controls ul {
         font-size: 20px;
+        color: white;
         padding-left: 1em;
     }
 
-    #controls img {
-        display: block;
-        width: 100%;
-    }
+    /* hide pc controls list */
+    #controls li { margin-top: 1.2em }
+
+    /* pc controls list hidden on mobile */
+    #pc_controls { display: none }
 
     /* footer */
     #footer { display: none }
 
+    /* single key on keypad */
     .key {
         flex: 25%;
-        height: 2.5em;
-        line-height: 2.5em;
+        height: 1.5em;
+        line-height: 1.5em;
         text-align: center;
-        margin: 0.2em;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+        margin: 0.1em;
         border-radius: 0.5em;
         background: #AAA;
         color: white;
-        font-size: 20px;
+        font-size: 36px;
     }
 
+    /* keypad container */
     #keypad {
         position: fixed;
         height: auto;
@@ -289,15 +333,7 @@ a:hover {
         width: 90%;
     }
 
-    #main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    /* hamburger menu button */
+    /* menu button */
     #menu_button {
         display: inline-block;
         z-index: 3;
@@ -311,35 +347,41 @@ a:hover {
         margin-left: 1em;
     }
 
+    /* rom list container */
     #rom_list {
         display: none;
         margin: 0.5em auto 0.5em auto;
-        border: 2px solid #4fff95;
-        background: lightgray url('../img/disk.svg');
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+        background: url('../img/disk.svg');
         width: 11em;
         height: 11em;
         padding: 1em;
         overflow-y: auto;
     }
 
+    /* rom list element */
     #rom_list li {
         list-style-type: none;
         line-height: 2;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         font-size: 24px;
     }
 
+    /* rom selection button */
     #roms_button {
         display: block;
         margin: 1em auto 1em auto;
         text-align: center;
         line-height: 2em;
         font-family: 'Staatliches', cursive;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
         width: 8em;
         height: 2em;
         border-radius: 2em;
         background: #666;
     }
 
+    /* keypad row */
     .row {
         display: flex;
         width: 100%;
@@ -367,7 +409,7 @@ a:hover {
     /* links in slide menu */
     #slide_menu a {
         display: block;
-        font-size: 24px;
+        font-size: 30px;
         margin-left: 1em;
         transition: 0.2s;
     }

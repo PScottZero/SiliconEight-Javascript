@@ -1,24 +1,44 @@
+<!--
+Paul Scott
+15 January 2019
+
+main page of silicon eight website
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- head -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- dependencies -->
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/chip8.js"></script>
+
+    <!-- title and favicon -->
     <link rel="icon" href="img/favicon.png">
     <title>SiliconEight</title>
 </head>
+
+<!-- body -->
 <body>
+
+<!-- main container -->
 <div id="main">
+
+    <!-- menu button -->
     <div id="menu_button" onclick="menu()">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
     </div>
 
+    <!-- sliding menu -->
     <div id="slide_menu">
         <a href="index.html"> Home </a>
         <a href="controls.html"> Controls </a>
@@ -26,10 +46,19 @@
         <a href="http://www.pjs4.com"> About Me </a>
     </div>
 
+    <!-- content container -->
     <div id="content">
+
+        <!-- ibm pc graphic -->
         <img src="img/pc.svg" alt="pc">
+
+        <!-- chip8 display -->
         <canvas id="chip8" width="320px" height="160px"></canvas>
+
+        <!-- rom selection button -->
         <a id="roms_button" onclick="show_roms()">Load Rom</a>
+
+        <!-- list of all local roms -->
         <div id="rom_list">
             <ul>
                 <li><a onclick="run_emulator('AIRPLANE')">Airplane</a></li>
@@ -59,6 +88,7 @@
             </ul>
         </div>
 
+        <!-- keypad for mobile users -->
         <div id="keypad">
             <div class="row">
                 <div class="key">1</div>
@@ -87,6 +117,7 @@
         </div>
     </div>
 
+    <!-- footer -->
     <div id="footer">
         <p> Created By Paul Scott &bull; Computer Science &bull; Penn State '21 &bull; 14 January 2019 </p>
     </div>

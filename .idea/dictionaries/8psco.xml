@@ -10,6 +10,7 @@
       <w>opcode</w>
       <w>subop</w>
       <w>tetris</w>
+      <w>xors</w>
     </words>
   </dictionary>
 </component>

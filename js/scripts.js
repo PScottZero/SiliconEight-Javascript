@@ -1,5 +1,17 @@
+/**
+ * @author Paul Scott
+ * @version 15 January 2019
+ *
+ * javascript file for 'index.html'
+ *
+ */
+
+// chip8 variable
 let chip8 = null;
 
+/**
+ * loads emulator when page loads
+ */
 $(document).ready( function() {
     chip8 = new Chip8();
     run_emulator('STARTUP');
@@ -11,6 +23,11 @@ $(document).ready( function() {
     }
 });
 
+/**
+ * runs chip8 emulator
+ * @param file - specified rom
+ * @returns {Promise<void>}
+ */
 async function run_emulator(file) {
     chip8.stop();
     await sleep(10);
@@ -19,85 +36,96 @@ async function run_emulator(file) {
     xhr.open("GET", "roms/" + file, true);
     xhr.responseType = "arraybuffer";
     xhr.onload = function () {
-        chip8.clear();
+        chip8.reset();
         chip8.load(new Uint8Array(xhr.response));
     };
     xhr.send();
     chip8.run();
 }
 
+/**
+ * highlights game specific controls
+ * @param file - specified rom
+ */
 function highlight_controls(file) {
-    let keys = document.getElementsByClassName("key");
+    let keys = document.getElementsByClassName('key');
+    let active_color = '#666';
     for (let i = 0; i < keys.length; i++) {
         keys[i].style.background = '#AAA'
     }
     switch (file) {
         case 'AIRPLANE':
         case 'LANDING':
-            keys[9].style.background = "#666";
+        case 'MISSILE':
+            keys[9].style.background = active_color;
             break;
         case 'ASTRO':
         case 'INVADERS':
         case 'UFO':
-            keys[4].style.background = "#666";
-            keys[5].style.background = "#666";
-            keys[6].style.background = "#666";
+            keys[4].style.background = active_color;
+            keys[5].style.background = active_color;
+            keys[6].style.background = active_color;
             break;
         case 'BLINKY':
-            keys[2].style.background = "#666";
-            keys[6].style.background = "#666";
-            keys[8].style.background = "#666";
-            keys[9].style.background = "#666";
+            keys[2].style.background = active_color;
+            keys[6].style.background = active_color;
+            keys[8].style.background = active_color;
+            keys[9].style.background = active_color;
             break;
         case 'BRIX':
-            keys[4].style.background = "#666";
-            keys[6].style.background = "#666";
+        case 'WIPEOFF':
+            keys[4].style.background = active_color;
+            keys[6].style.background = active_color;
             break;
         case 'CAVE':
-            keys[1].style.background = "#666";
-            keys[4].style.background = "#666";
-            keys[6].style.background = "#666";
-            keys[9].style.background = "#666";
-            keys[15].style.background = "#666";
+            keys[1].style.background = active_color;
+            keys[4].style.background = active_color;
+            keys[6].style.background = active_color;
+            keys[9].style.background = active_color;
+            keys[15].style.background = active_color;
             break;
         case 'LUNAR':
-            keys[1].style.background = "#666";
-            keys[4].style.background = "#666";
-            keys[6].style.background = "#666";
+            keys[1].style.background = active_color;
+            keys[4].style.background = active_color;
+            keys[6].style.background = active_color;
             break;
         case 'PADDLES':
-            keys[4].style.background = "#666";
-            keys[6].style.background = "#666";
-            keys[15].style.background = "#666";
+            keys[4].style.background = active_color;
+            keys[6].style.background = active_color;
+            keys[15].style.background = active_color;
             break;
         case 'PONG':
         case 'VBRIX':
-            keys[0].style.background = "#666";
-            keys[4].style.background = "#666";
+            keys[0].style.background = active_color;
+            keys[4].style.background = active_color;
+            keys[8].style.background = active_color;
             break;
         case 'TANK':
-            keys[1].style.background = "#666";
-            keys[4].style.background = "#666";
-            keys[5].style.background = "#666";
-            keys[6].style.background = "#666";
-            keys[9].style.background = "#666";
+            keys[1].style.background = active_color;
+            keys[4].style.background = active_color;
+            keys[5].style.background = active_color;
+            keys[6].style.background = active_color;
+            keys[9].style.background = active_color;
             break;
         case 'TETRIS':
-            keys[4].style.background = "#666";
-            keys[5].style.background = "#666";
-            keys[6].style.background = "#666";
-            keys[8].style.background = "#666";
+            keys[4].style.background = active_color;
+            keys[5].style.background = active_color;
+            keys[6].style.background = active_color;
+            keys[8].style.background = active_color;
             break;
         case 'WORM':
         case 'XMIRROR':
-            keys[1].style.background = "#666";
-            keys[4].style.background = "#666";
-            keys[6].style.background = "#666";
-            keys[9].style.background = "#666";
+            keys[1].style.background = active_color;
+            keys[4].style.background = active_color;
+            keys[6].style.background = active_color;
+            keys[9].style.background = active_color;
             break;
     }
 }
 
+/**
+ * toggle sliding menu
+ */
 function menu() {
     document.getElementById("menu_button").classList.toggle("change");
 
@@ -107,24 +135,43 @@ function menu() {
     } else slide.style.left = "0em";
 }
 
+/**
+ * show rom list
+ */
 function show_roms() {
     let style = document.getElementById("rom_list").style;
     if (style.display === 'none') style.display = 'block';
     else style.display = 'none';
 }
 
+/**
+ * pause javascript for specified amount of time
+ * @returns {Promise<any>}
+ */
 function sleep() {
     return new Promise(resolve => setTimeout(resolve, 10));
 }
 
+/**
+ * mobile keypad 'down' handler
+ * @param event
+ */
 function keypad_down(event) {
     chip8.keypress(parseInt(event.target.innerHTML, 16), 1)
 }
 
+/**
+ * mobile keypad 'up' handler
+ * @param event
+ */
 function keypad_up(event) {
     chip8.keypress(parseInt(event.target.innerHTML, 16), 0);
 }
 
+/**
+ * sends key pressed events to emulator
+ * @param e - key event
+ */
 document.onkeydown = function (e) {
     e = e || window.event;
     switch (e.keyCode) {
@@ -179,6 +226,10 @@ document.onkeydown = function (e) {
     }
 };
 
+/**
+ * sends key released events to emulator
+ * @param e - key event
+ */
 document.onkeyup = function (e) {
     e = e || window.event;
     switch (e.keyCode) {
@@ -233,13 +284,17 @@ document.onkeyup = function (e) {
     }
 };
 
-// prevents image dragging
+/**
+ * prevents image dragging
+ */
 $(document).on("dragstart", function() {
     return false;
 });
 
-// from Stack Overflow
-// https://stackoverflow.com/questions/1403615/use-jquery-to-hide-a-div-when-the-user-clicks-outside-of-it
+/**
+ * hides rom list if user clicks off of container
+ * From: https://stackoverflow.com/questions/1403615/use-jquery-to-hide-a-div-when-the-user-clicks-outside-of-it
+ */
 $(document).mouseup(function(e)
 {
     let container = $("rom_list");
