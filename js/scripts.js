@@ -28,8 +28,9 @@ $(document).ready( function() {
  * @param file - specified rom
  * @returns {Promise<void>}
  */
-function run_emulator(file) {
+async function run_emulator(file) {
     chip8.stop();
+    await sleep(10);
     highlight_controls(file);
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "roms/" + file, true);
@@ -141,6 +142,14 @@ function show_roms() {
     let style = document.getElementById("rom_list").style;
     if (style.display === 'none') style.display = 'block';
     else style.display = 'none';
+}
+
+/**
+ * pause javascript for specified amount of time
+ * @returns {Promise<any>}
+ */
+function sleep() {
+    return new Promise(resolve => setTimeout(resolve, 10));
 }
 
 /**
