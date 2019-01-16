@@ -28,7 +28,7 @@ $(document).ready( function() {
  * @param file - specified rom
  * @returns {Promise<void>}
  */
-async function run_emulator(file) {
+function run_emulator(file) {
     chip8.stop();
     highlight_controls(file);
     let xhr = new XMLHttpRequest();
