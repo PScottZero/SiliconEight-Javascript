@@ -30,7 +30,7 @@ $(document).ready( function() {
  */
 async function run_emulator(file) {
     chip8.stop();
-    await sleep(10);
+    await sleep();
     highlight_controls(file);
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "roms/" + file, true);
