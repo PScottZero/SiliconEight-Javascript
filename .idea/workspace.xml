@@ -1,7 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f91af85-cc7d-4136-982e-32a762fe18ce" name="Default Changelist" comment="" />
+    <list default="true" id="1f91af85-cc7d-4136-982e-32a762fe18ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roms/startup.ch8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controls.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/desktop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/disk.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/disk.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/keyboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/controls.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pc.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/pc.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/chip8.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/chip8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/scripts_alt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/15PUZZLE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/AIRPLANE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/ASTRO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/BLINKY" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/BLITZ" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/BRIX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/CAVE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/CONNECT4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/FISH" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/GUESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/HELLO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/HIDDEN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/IBMLOGO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/INVADERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/KALEID" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/KEYPAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/LANDING" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/LUNAR" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/MAZE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/MERLIN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/MISSILE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/PADDLES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/PONG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/PONG2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/PUZZLE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/SIERP" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/STARS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/STARTUP" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/SYZYGY" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/TANK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/TETRIS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/UFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/VBRIX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/VERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/WIPEOFF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/WORM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roms/XMIRROR" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,40 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="20" column="92" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="92" />
-              <folding>
-                <element signature="e#4639#4645#0" expanded="true" />
-                <element signature="e#4663#4669#0" expanded="true" />
-                <element signature="e#4685#4691#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controls.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/mobile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4564">
-              <caret line="163" column="20" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="20" />
+            <state relative-caret-position="448">
+              <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -57,8 +78,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/desktop.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="3668">
+              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/mobile.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="83" column="22" lean-forward="true" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -66,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/chip8.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="-1540">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -75,17 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/scripts_alt.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+            <state relative-caret-position="4614">
+              <caret line="194" column="2" selection-start-line="194" selection-start-column="2" selection-end-line="194" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -115,6 +136,8 @@
       <find>/</find>
       <find>'#666'</find>
       <find>[V]</find>
+      <find>list.pu</find>
+      <find>z-index</find>
     </findStrings>
     <replaceStrings>
       <replace>this.next_instruction();</replace>
@@ -139,20 +162,20 @@
         <option value="$PROJECT_DIR$/js/worker.js" />
         <option value="$PROJECT_DIR$/howto.html" />
         <option value="$PROJECT_DIR$/js/scripts_alt.js" />
+        <option value="$PROJECT_DIR$/controls.html" />
         <option value="$PROJECT_DIR$/js/chip8.js" />
         <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/css/mobile.css" />
         <option value="$PROJECT_DIR$/js/scripts.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/controls.html" />
+        <option value="$PROJECT_DIR$/css/mobile.css" />
         <option value="$PROJECT_DIR$/css/desktop.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1908" />
+    <option name="x" value="-12" />
     <option name="width" value="1944" />
-    <option name="height" value="2088" />
+    <option name="height" value="2082" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -169,17 +192,7 @@
             <path>
               <item name="SiliconEight (Web)" type="b2602c69:ProjectViewProjectNode" />
               <item name="SiliconEight-Javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SiliconEight (Web)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SiliconEight-Javascript" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SiliconEight (Web)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SiliconEight-Javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,16 +203,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pscottzero.github.io" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/roms" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\8psco\Documents\GitHub\SiliconEight-Javascript\roms" />
       <recent name="C:\Users\8psco\Documents\GitHub\SiliconEight-Javascript\img" />
       <recent name="C:\Users\8psco\WebstormProjects\SiliconEightJavascript\img" />
       <recent name="C:\Users\8psco\WebstormProjects\SiliconEightJavascript\roms" />
@@ -219,7 +235,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="index.html" type="JavascriptDebugType" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/SiliconEight-Javascript/index.html">
+    <configuration name="index.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/SiliconEight-Javascript/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
   </component>
@@ -281,17 +297,20 @@
       <workItem from="1547843587316" duration="1788000" />
       <workItem from="1547845432890" duration="32000" />
       <workItem from="1547845523568" duration="10000" />
+      <workItem from="1549223196534" duration="76000" />
+      <workItem from="1549305186287" duration="48000" />
+      <workItem from="1554919219533" duration="9615000" />
+      <workItem from="1554929589767" duration="1962000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101353000" />
+    <option name="totallyTimeSpent" value="113054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1719" height="932" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4863184" visible="true" weight="0.2676558" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4863184" visible="true" weight="0.16023739" />
       <window_info id="Structure" order="1" sideWeight="0.5136816" side_tool="true" weight="0.2676558" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -344,74 +363,59 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/js/worker.js" />
-    <entry file="file://$PROJECT_DIR$/roms/BLITZ">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/roms/BLITZ" />
     <entry file="file://$PROJECT_DIR$/img/mapped.svg" />
     <entry file="file://$PROJECT_DIR$/img/disk.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/keyboard.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="20" column="92" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="92" />
-          <folding>
-            <element signature="e#4639#4645#0" expanded="true" />
-            <element signature="e#4663#4669#0" expanded="true" />
-            <element signature="e#4685#4691#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controls.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/img/keyboard.svg" />
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+        <state relative-caret-position="224">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/mobile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4564">
-          <caret line="163" column="20" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="20" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/controls.html" />
+    <entry file="file://$PROJECT_DIR$/img/logo.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/scripts_alt.js" />
+    <entry file="file://$PROJECT_DIR$/img/controls.svg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/js/chip8.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="-1540">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="4614">
+          <caret line="194" column="2" selection-start-line="194" selection-start-column="2" selection-end-line="194" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/scripts_alt.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+        <state relative-caret-position="448">
+          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="83" column="22" lean-forward="true" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/desktop.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="3668">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
         </state>
       </provider>
     </entry>

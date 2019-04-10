@@ -10,120 +10,87 @@ main page of silicon eight website
 
 <!-- head -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <!-- dependencies -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/desktop.css">
-    <link rel="stylesheet" href="css/mobile.css">
-    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/chip8.js"></script>
+  <!-- dependencies -->
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/desktop.css" rel="stylesheet">
+  <link href="css/mobile.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/chip8.js"></script>
 
-    <!-- title and favicon -->
-    <link rel="icon" href="img/favicon.png">
-    <title>SiliconEight</title>
+  <!-- title and favicon -->
+  <link href="img/favicon.png" rel="icon">
+  <title>SiliconEight</title>
 </head>
 
 <!-- body -->
 <body>
 
-<!-- main container -->
-<div id="main">
+<!-- sliding menu -->
+<div id="header">
+  <img src="img/logo.svg" alt="Silicon Eight">
 
-    <!-- menu button -->
-    <div id="menu_button" onclick="menu()">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+  <nav>
+    <!-- rom selection button -->
+    <a id="roms" onclick="nav(this)">Load Rom</a>
+    <a id="ctrl" onclick="nav(this)"> Controls </a>
+    <a href="https://en.wikipedia.org/wiki/CHIP-8"> Chip-8 Wiki </a>
+    <a href="https://github.com/PScottZero/SiliconEight-Javascript"> GitHub </a>
+    <a href="http://www.pjs4.com"> About </a>
+  </nav>
+</div>
+
+<!-- content container -->
+<div id="content">
+
+  <!-- chip8 display -->
+  <canvas height="160px" id="chip8" width="320px"></canvas>
+
+  <!-- ibm pc graphic -->
+  <img alt="pc" src="img/pc.svg">
+
+  <!-- keypad for mobile users -->
+  <div id="keypad">
+    <div class="row">
+      <div class="key">1</div>
+      <div class="key">2</div>
+      <div class="key">3</div>
+      <div class="key">C</div>
     </div>
-
-    <!-- sliding menu -->
-    <div id="slide_menu">
-        <a href="index.html"> Home </a>
-        <a href="controls.html"> Controls </a>
-        <a href="https://en.wikipedia.org/wiki/CHIP-8"> About the Chip-8 </a>
-        <a href="https://github.com/PScottZero/SiliconEight-Javascript"> View on GitHub </a>
-        <a href="http://www.pjs4.com"> About Me </a>
+    <div class="row">
+      <div class="key">4</div>
+      <div class="key">5</div>
+      <div class="key">6</div>
+      <div class="key">D</div>
     </div>
-
-    <!-- content container -->
-    <div id="content">
-
-        <!-- ibm pc graphic -->
-        <img src="img/pc.svg" alt="pc">
-
-        <!-- chip8 display -->
-        <canvas id="chip8" width="320px" height="160px"></canvas>
-
-        <!-- rom selection button -->
-        <a id="roms_button" onclick="show_roms()">Load Rom</a>
-
-        <!-- list of all local roms -->
-        <div id="rom_list">
-            <ul>
-                <li><a onclick="run_emulator('AIRPLANE')">Airplane</a></li>
-                <li><a onclick="run_emulator('ASTRO')">Astro Dodge</a></li>
-                <li><a onclick="run_emulator('BLINKY')">Blinky</a></li>
-                <li><a onclick="run_emulator('BRIX')">Brix</a></li>
-                <li><a onclick="run_emulator('CAVE')">Cave</a></li>
-                <li><a onclick="run_emulator('FISH')">Fishie</a></li>
-                <li><a onclick="run_emulator('HELLO')">Hello</a></li>
-                <li><a onclick="run_emulator('IBMLOGO')">IBM Logo</a></li>
-                <li><a onclick="run_emulator('LANDING')">Landing</a></li>
-                <li><a onclick="run_emulator('LUNAR')">Lunar Lander</a></li>
-                <li><a onclick="run_emulator('MAZE')">Maze</a></li>
-                <li><a onclick="run_emulator('MISSILE')">Missile</a></li>
-                <li><a onclick="run_emulator('PADDLES')">Paddles</a></li>
-                <li><a onclick="run_emulator('PONG')">Pong</a></li>
-                <li><a onclick="run_emulator('SIERP')">Sierpinski</a></li>
-                <li><a onclick="run_emulator('INVADERS')">Space Invaders</a></li>
-                <li><a onclick="run_emulator('STARS')">Stars</a></li>
-                <li><a onclick="run_emulator('TANK')">Tank</a></li>
-                <li><a onclick="run_emulator('TETRIS')">Tetris</a></li>
-                <li><a onclick="run_emulator('UFO')">UFO</a></li>
-                <li><a onclick="run_emulator('VBRIX')">Vertical Brix</a></li>
-                <li><a onclick="run_emulator('WIPEOFF')">Wipe Off</a></li>
-                <li><a onclick="run_emulator('WORM')">Worm</a></li>
-                <li style="margin-bottom: 1em"><a onclick="run_emulator('XMIRROR')">X-Mirror</a></li>
-            </ul>
-        </div>
-
-        <!-- keypad for mobile users -->
-        <div id="keypad">
-            <div class="row">
-                <div class="key">1</div>
-                <div class="key">2</div>
-                <div class="key">3</div>
-                <div class="key">C</div>
-            </div>
-            <div class="row">
-                <div class="key">4</div>
-                <div class="key">5</div>
-                <div class="key">6</div>
-                <div class="key">D</div>
-            </div>
-            <div class="row">
-                <div class="key">7</div>
-                <div class="key">8</div>
-                <div class="key">9</div>
-                <div class="key">E</div>
-            </div>
-            <div class="row">
-                <div class="key">A</div>
-                <div class="key">0</div>
-                <div class="key">B</div>
-                <div class="key">F</div>
-            </div>
-        </div>
+    <div class="row">
+      <div class="key">7</div>
+      <div class="key">8</div>
+      <div class="key">9</div>
+      <div class="key">E</div>
     </div>
-
-    <!-- footer -->
-    <div id="footer">
-        <p> Created By Paul Scott &bull; Computer Science &bull; Penn State '21 &bull; 18 January 2019 </p>
+    <div class="row">
+      <div class="key">A</div>
+      <div class="key">0</div>
+      <div class="key">B</div>
+      <div class="key">F</div>
     </div>
+  </div>
+</div>
+
+<!-- rom list and controls panel -->
+<div id="rom_list"></div>
+<div id="controls">
+  <img src="img/controls.svg" alt="Controls">
+</div>
+
+<!-- footer -->
+<div id="footer">
+  <p> Created By Paul Scott &bull; Computer Science &bull; Penn State '21 &bull; Last Updated 10 April 2019 </p>
 </div>
 </body>
 </html>
