@@ -1,8 +1,8 @@
 <!--
 Paul Scott
-15 January 2019
+11 April 2019
 
-main page of silicon eight website
+silicon eight website
 -->
 
 <!DOCTYPE html>
@@ -10,14 +10,19 @@ main page of silicon eight website
 
 <!-- head -->
 <head>
+
+  <!-- metadata -->
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <!-- dependencies -->
-  <link href="css/styles.css" rel="stylesheet">
+  <!-- styles -->
   <link href="css/desktop.css" rel="stylesheet">
   <link href="css/mobile.css" rel="stylesheet">
+
+  <!-- font -->
   <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+
+  <!-- scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/chip8.js"></script>
@@ -30,21 +35,23 @@ main page of silicon eight website
 <!-- body -->
 <body>
 
-<!-- sliding menu -->
+<!-- header -->
 <div id="header">
+
+  <!-- logo -->
   <img src="img/logo.svg" alt="Silicon Eight">
 
+  <!-- navigation links -->
   <nav>
-    <!-- rom selection button -->
-    <a id="roms" onclick="nav(this)">Load Rom</a>
-    <a id="ctrl" onclick="nav(this)"> Controls </a>
+    <a id="roms" onclick="menu_toggle(this)">Load Rom</a>
+    <a id="ctrl" onclick="menu_toggle(this)"> Controls </a>
     <a href="https://en.wikipedia.org/wiki/CHIP-8"> Chip-8 Wiki </a>
     <a href="https://github.com/PScottZero/SiliconEight-Javascript"> GitHub </a>
     <a href="http://www.pjs4.com"> About </a>
   </nav>
 </div>
 
-<!-- content container -->
+<!-- content -->
 <div id="content">
 
   <!-- chip8 display -->
@@ -53,7 +60,7 @@ main page of silicon eight website
   <!-- ibm pc graphic -->
   <img alt="pc" src="img/pc.svg">
 
-  <!-- keypad for mobile users -->
+  <!-- keypad for mobile -->
   <div id="keypad">
     <div class="row">
       <div class="key">1</div>
@@ -90,7 +97,7 @@ main page of silicon eight website
 
 <!-- footer -->
 <div id="footer">
-  <p> Created By Paul Scott &bull; Computer Science &bull; Penn State '21 &bull; Last Updated 10 April 2019 </p>
+  <p> Created By Paul Scott &bull; Computer Science &bull; Penn State '21 &bull; Last Updated 11 April 2019 </p>
 </div>
 </body>
 </html>
