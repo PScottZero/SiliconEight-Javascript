@@ -7,9 +7,13 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  background: url('assets/img/background.jpg') center;
-  background-size: cover;
+  @media screen and (min-width: 700px) {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  background: url('assets/img/background.jpg') no-repeat center;
+  background-size: auto auto;
   font-family: 'Lexend Deca', Arial, sans-serif;
 }
