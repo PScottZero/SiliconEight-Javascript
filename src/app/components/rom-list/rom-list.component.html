@@ -1,0 +1,6 @@
+<h1>Roms:</h1>
+<div id="rom_list">
+  <div *ngFor="let rom of romList" (click)="loadRom(rom)" class="rom">
+    <p>{{rom}}</p>
+  </div>
+</div>
